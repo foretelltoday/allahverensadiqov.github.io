@@ -3,209 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Allahverən Sadıqov | Cybersecurity Portfolio</title>
+    <title>Allahverən Sadıqov | SOC Analyst & Cybersecurity</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #0a66c2;
-            --bg-color: #f3f2ef;
-            --text-main: #191919;
-            --text-sub: #666666;
+            --primary: #0a66c2;
+            --bg: #f3f2ef;
+            --text: #191919;
+            --sub-text: #666666;
             --white: #ffffff;
             --border: #e0e0e0;
-            --accent: #057642;
+            --success: #057642;
         }
 
         body {
-            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            font-family: -apple-system, system-ui, sans-serif;
+            background-color: var(--bg);
             margin: 0;
-            padding: 0;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
-        .container {
-            max-width: 850px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+        .container { max-width: 850px; margin: 30px auto; padding: 0 15px; }
 
-        /* Card Styles */
         .card {
             background: var(--white);
             border-radius: 8px;
             border: 1px solid var(--border);
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             overflow: hidden;
-            box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
         }
 
-        /* Profile Header */
-        .banner {
-            height: 140px;
-            background: linear-gradient(135deg, #0a66c2 0%, #004182 100%);
-        }
-
-        .profile-content { padding: 0 24px 24px; }
-        .avatar-img {
-            width: 152px; height: 152px;
+        .header-banner { height: 150px; background: linear-gradient(135deg, #0a66c2 0%, #004182 100%); }
+        .profile-header { padding: 0 24px 24px; position: relative; }
+        
+        .profile-img {
+            width: 150px; height: 150px;
             border-radius: 50%;
             border: 4px solid var(--white);
+            margin-top: -75px;
             object-fit: cover;
-            margin-top: -76px;
             background: white;
         }
 
-        h1 { font-size: 26px; margin: 16px 0 4px; }
-        .headline { font-size: 18px; color: var(--text-main); font-weight: 400; }
+        .info h1 { font-size: 28px; margin: 15px 0 5px; }
+        .info .tagline { font-size: 18px; color: var(--text); font-weight: 400; margin-bottom: 10px; }
         
-        .contact-info-bar {
-            display: flex; flex-wrap: wrap; gap: 15px;
-            font-size: 14px; color: var(--text-sub); margin-top: 12px;
+        .contact-bar { display: flex; flex-wrap: wrap; gap: 15px; font-size: 14px; margin: 15px 0; }
+        .contact-bar a { color: var(--primary); text-decoration: none; font-weight: 600; }
+
+        .section-title { 
+            font-size: 20px; padding: 20px 24px 10px; margin: 0;
+            border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 10px;
         }
-        .contact-info-bar a { color: var(--primary-color); text-decoration: none; font-weight: 600; }
 
-        /* Sections */
-        .section-padding { padding: 24px; }
-        h2 { font-size: 20px; margin: 0 0 20px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; }
+        .content { padding: 20px 24px; }
 
-        /* Experience & Education Items */
-        .item { display: flex; gap: 16px; margin-bottom: 20px; }
-        .icon-box {
-            min-width: 48px; height: 48px;
-            background: #f0f7ff;
-            border-radius: 4px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 20px; color: var(--primary-color);
+        .experience-item { display: flex; gap: 15px; margin-bottom: 25px; }
+        .exp-icon { 
+            width: 50px; height: 50px; background: #e7f3ff; 
+            border-radius: 8px; display: flex; align-items: center; justify-content: center;
+            color: var(--primary); font-size: 20px;
         }
-        .details h3 { margin: 0; font-size: 16px; }
-        .details .meta { color: var(--text-sub); font-size: 14px; margin: 2px 0; }
-        .details .desc { font-size: 14px; color: #444; margin-top: 6px; }
 
-        /* Skills & Certs Tags */
-        .tags-container { display: flex; flex-wrap: wrap; gap: 8px; }
-        .tag {
-            background: #f3f2ef;
-            color: #666;
-            padding: 6px 12px;
-            border-radius: 4px;
-            font-size: 14px;
-            font-weight: 600;
-            border: 1px solid var(--border);
+        .skill-group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .skill-tag { 
+            background: #f3f2ef; border: 1px solid var(--border);
+            padding: 5px 15px; border-radius: 20px; font-size: 13px; font-weight: 600;
         }
-        .tag-blue { background: #e7f3ff; color: var(--primary-color); border: 1px solid #cce4ff; }
+        .skill-tag.active { background: #e7f3ff; color: var(--primary); border-color: #cce4ff; }
 
-        /* Projects Section */
-        .project-card {
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 16px;
-            margin-bottom: 12px;
+        .project-box {
+            border: 1px solid var(--border); border-radius: 8px; padding: 15px;
+            margin-top: 15px; background: #fafafa;
+        }
+
+        .btn {
+            padding: 10px 25px; border-radius: 25px; font-weight: 600;
+            text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
             transition: 0.2s;
         }
-        .project-card:hover { background: #fafafa; border-color: #ccc; }
-
-        /* Buttons */
-        .cta-group { display: flex; gap: 12px; margin-top: 20px; }
-        .btn {
-            padding: 8px 20px; border-radius: 20px;
-            text-decoration: none; font-weight: 600; font-size: 15px;
-            display: inline-flex; align-items: center; gap: 8px;
-        }
-        .btn-filled { background: var(--primary-color); color: white; }
-        .btn-outline { border: 1px solid var(--primary-color); color: var(--primary-color); }
+        .btn-blue { background: var(--primary); color: white; }
+        .btn-outline { border: 1px solid var(--primary); color: var(--primary); }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="card">
-            <div class="banner"></div>
-            <div class="profile-content">
-                <img src="sh.png" alt="Allahverən Sadıqov" class="avatar-img">
+<div class="container">
+    <div class="card">
+        <div class="header-banner"></div>
+        <div class="profile-header">
+            <img src="sh.png" alt="Allahverən Sadıqov" class="profile-img">
+            <div class="info">
                 <h1>Allahverən Sadıqov</h1>
-                <div class="headline">SOC Analyst | Blue Team & Cybersecurity Specialist</div>
-                
-                <div class="contact-info-bar">
+                <div class="tagline">SOC Analyst | Blue Team & Network Security Specialist</div>
+                <div class="contact-bar">
+                    <span><i class="fa-solid fa-location-dot"></i> Bakı, Azərbaycan</span>
                     <span><i class="fa-solid fa-envelope"></i> <a href="mailto:allahveran@sadiqov.com">allahveran@sadiqov.com</a></span>
                     <span><i class="fa-solid fa-globe"></i> <a href="https://sadiqov.com">sadiqov.com</a></span>
-                    <span><i class="fa-solid fa-location-dot"></i> Bakı, Azərbaycan</span>
                 </div>
-
-                <div class="cta-group">
-                    <a href="mailto:allahveran@sadiqov.com" class="btn btn-filled"><i class="fa-solid fa-paper-plane"></i> Məktub Yaz</a>
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                    <a href="mailto:allahveran@sadiqov.com" class="btn btn-blue"><i class="fa-solid fa-paper-plane"></i> Əlaqə</a>
                     <a href="#" class="btn btn-outline"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="card section-padding">
-            <h2>Haqqında</h2>
-            <p>
-                Kibertəhlükəsizlik mütəxəssisi olaraq kritik infrastrukturun monitorinqi və müdafiəsi üzrə ixtisaslaşıram. 
-                **Wazuh EDR/XDR**, SIEM sistemləri və Linux mühitlərində təhlükəsizlik konfiqurasiyaları üzrə praktiki təcrübəyə malikəm. 
-                Məqsədim texnoloji həllər vasitəsilə kiber-təhdidlərin vaxtında müəyyən edilməsi və neytrallaşdırılmasıdır.
+    <div class="card">
+        <h2 class="section-title"><i class="fa-solid fa-user-shield"></i> Haqqında</h2>
+        <div class="content">
+            <p style="margin: 0;">
+                Kibertəhlükəsizlik sahəsində "Blue Team" əməliyyatları, monitorinq və təhlükəsizlik insidentlərinin analizi üzrə ixtisaslaşıram. 
+                **Wazuh EDR/XDR**, SIEM platformaları və Linux sistem administratorluğu sahəsində dərin biliklərə malikəm. 
+                Kritik infrastrukturun qorunması və zəifliklərin aradan qaldırılması üçün effektiv həllər hazırlayıram.
             </p>
         </div>
+    </div>
 
-        <div class="card section-padding">
-            <h2>Layihələr və Təcrübə</h2>
-            
-            <div class="item">
-                <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
-                <div class="details">
-                    <h3>SOC Analyst Trainee</h3>
-                    <div class="meta">Code Academy • 2025 - Hazırda</div>
-                    <div class="desc">Şəbəkə trafikinin analizi, log idarəetməsi və insidentlərə cavab strategiyalarının hazırlanması.</div>
+    <div class="card">
+        <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Təcrübə və Layihələr</h2>
+        <div class="content">
+            <div class="experience-item">
+                <div class="exp-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <div>
+                    <h3 style="margin:0;">SOC Analyst Trainee</h3>
+                    <div style="font-size:14px; color:var(--sub-text);">Code Academy | 2025 - Hazırda</div>
+                    <p style="font-size:14px; margin-top:8px;">Real-vaxt rejimində təhlükəsizlik loqlarının analizi və şəbəkə monitorinqi.</p>
                 </div>
-            </div>
-
-            <div class="project-card">
-                <h3><i class="fa-solid fa-robot"></i> Server Monitoring Bot (CS310)</h3>
-                <p class="desc" style="font-size: 13px;">Linux serverləri üçün hazırlanmış, SSH girişlərini və veb trafiki real-vaxt rejimində Telegram üzərindən bildirişlərlə çatdıran monitorinq sistemi.</p>
-            </div>
-        </div>
-
-        <div class="card section-padding">
-            <h2>Texniki Bacarıqlar və Sertifikatlar</h2>
-            <div class="tags-container" style="margin-bottom: 20px;">
-                <span class="tag tag-blue">Wazuh EDR/XDR</span>
-                <span class="tag tag-blue">Linux (RHEL/Ubuntu)</span>
-                <span class="tag tag-blue">SIEM (Log Analysis)</span>
-                <span class="tag tag-blue">Network Security</span>
-                <span class="tag tag-blue">Cloudflare WAF</span>
-                <span class="tag tag-blue">Docker</span>
-                <span class="tag tag-blue">Active Directory</span>
             </div>
             
-            <div class="item" style="margin-bottom: 0;">
-                <div class="icon-box" style="background: #e6fffa; color: #057642;"><i class="fa-solid fa-certificate"></i></div>
-                <div class="details">
-                    <h3>Red Hat Certified System Administrator (RHCSA)</h3>
-                    <div class="meta">Kurs tamamlanıb • 2026</div>
-                </div>
+            <div class="project-box">
+                <h4 style="margin:0; color:var(--primary);"><i class="fa-solid fa-terminal"></i> Layihe Monitor (CS310)</h4>
+                <p style="font-size:13px; margin: 5px 0 0;">Linux serverləri üçün Telegram üzərindən SSH girişlərini və veb trafikini izləyən bot-monitorinq sistemi.</p>
             </div>
         </div>
+    </div>
 
-        <div class="card section-padding">
-            <h2>Təhsil</h2>
-            <div class="item">
-                <div class="icon-box"><i class="fa-solid fa-user-graduate"></i></div>
-                <div class="details">
-                    <h3>Kibertəhlükəsizlik Proqramı</h3>
-                    <div class="meta">Code Academy • 2025 - 2026</div>
+    <div class="card">
+        <h2 class="section-title"><i class="fa-solid fa-screwdriver-wrench"></i> Texniki Toolbox</h2>
+        <div class="content">
+            <div class="skill-group">
+                <span class="skill-tag active">Wazuh EDR/XDR</span>
+                <span class="skill-tag active">Linux (RHEL/Ubuntu)</span>
+                <span class="skill-tag active">Cloudflare WAF</span>
+                <span class="skill-tag">Nmap & Subfinder</span>
+                <span class="skill-tag">Cisco Packet Tracer</span>
+                <span class="skill-tag active">SIEM/Log Analysis</span>
+                <span class="skill-tag">Docker & Virtualization</span>
+                <span class="skill-tag">Active Directory</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Təhsil və Sertifikatlar</h2>
+        <div class="content">
+            <div class="experience-item" style="margin-bottom: 15px;">
+                <div class="exp-icon" style="background:#e6fffa; color:var(--success);"><i class="fa-solid fa-certificate"></i></div>
+                <div>
+                    <h3 style="margin:0;">Red Hat System Administrator (RHCSA)</h3>
+                    <div style="font-size:14px; color:var(--sub-text);">Kurs tamamlanıb | 2026</div>
                 </div>
             </div>
-            <div class="item">
-                <div class="icon-box"><i class="fa-solid fa-university"></i></div>
-                <div class="details">
-                    <h3>Beynəlxalq İqtisadi Münasibətlər</h3>
-                    <div class="meta">UNEC • 2008 - 2012</div>
+            <div class="experience-item">
+                <div class="exp-icon"><i class="fa-solid fa-university"></i></div>
+                <div>
+                    <h3 style="margin:0;">Kibertəhlükəsizlik Proqramı</h3>
+                    <div style="font-size:14px; color:var(--sub-text);">Code Academy | 2025 - 2026</div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 </body>
 </html>
