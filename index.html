@@ -60,7 +60,21 @@
 
         h1 { font-size: 26px; margin: 16px 0 4px; }
         .headline { font-size: 18px; color: var(--text-main); font-weight: 400; margin-bottom: 8px; }
-        .sub-info { font-size: 14px; color: var(--text-sub); }
+        
+        .contact-info-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 14px;
+            color: var(--text-sub);
+            margin-top: 10px;
+        }
+
+        .contact-info-bar a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
 
         .section {
             background: var(--white);
@@ -103,17 +117,32 @@
             font-weight: 600;
         }
 
-        .contact-btn {
-            display: inline-block;
-            background: var(--primary-color);
-            color: white;
+        .cta-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn {
             padding: 10px 24px;
             border-radius: 24px;
             text-decoration: none;
             font-weight: 600;
-            margin-top: 16px;
             font-size: 15px;
+            transition: 0.3s;
         }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn:hover { opacity: 0.8; }
     </style>
 </head>
 <body>
@@ -125,27 +154,36 @@
                 <img src="sh.png" alt="Allahverən Sadıqov" class="avatar-img">
                 <h1>Allahverən Sadıqov</h1>
                 <div class="headline">SOC Analyst & Blue Team Specialist</div>
-                <div class="sub-info">Bakı, Azərbaycan</div>
-                <a href="mailto:kamallahveren@gmail.com" class="contact-btn">Əlaqə Saxla</a>
+                
+                <div class="contact-info-bar">
+                    <span><i class="fa-solid fa-location-dot"></i> Bakı, Azərbaycan</span>
+                    <span><i class="fa-solid fa-envelope"></i> <a href="mailto:allahveran@sadiqov.com">allahveran@sadiqov.com</a></span>
+                    <span><i class="fa-solid fa-globe"></i> <a href="https://sadiqov.com" target="_blank">sadiqov.com</a></span>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="mailto:allahveran@sadiqov.com" class="btn btn-primary">Məktub Yaz</a>
+                    <a href="https://www.linkedin.com" target="_blank" class="btn btn-outline">LinkedIn Profili</a>
+                </div>
             </div>
         </div>
 
         <div class="section">
             <h2>Haqqında</h2>
             <p style="line-height: 1.6; color: #333; margin: 0;">
-                Kibertəhlükəsizlik sahəsində "Blue Team" əməliyyatları, log analizi və monitorinq sistemləri üzrə ixtisaslaşmışam. 
-                Xüsusilə **Wazuh EDR/XDR** tətbiqi və Linux sistemlərinin təhlükəsizliyi sahəsində praktiki təcrübəyə malikəm.
+                Kibertəhlükəsizlik mütəxəssisi olaraq "Blue Team" əməliyyatları və SOC monitorinqi üzrə ixtisaslaşıram. 
+                Sistem təhlükəsizliyi, log analizi və **Wazuh EDR/XDR** tətbiqi vasitəsilə infrastrukturun qorunmasını təmin edirəm.
             </p>
         </div>
 
         <div class="section">
             <h2>Təcrübə</h2>
             <div class="item">
-                <div class="icon"><i class="fa-solid fa-shield-virus"></i></div>
+                <div class="icon"><i class="fa-solid fa-user-shield"></i></div>
                 <div class="details">
-                    <h3>Cybersecurity Trainee (SOC Analyst)</h3>
+                    <h3>SOC Analyst Trainee</h3>
                     <p>Code Academy • 2025 - Hazırda</p>
-                    <p>SIEM/EDR monitorinqi və şəbəkə trafikinin analizi.</p>
+                    <p>İnsidentlərin monitorinqi, trafik analizi və kiber-hücumların qarşısının alınması strategiyaları.</p>
                 </div>
             </div>
         </div>
@@ -155,7 +193,7 @@
             <div class="item">
                 <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
                 <div class="details">
-                    <h3>Kibertəhlükəsizlik Proqramı</h3>
+                    <h3>Kibertəhlükəsizlik</h3>
                     <p>Code Academy • 2025 - 2026</p>
                 </div>
             </div>
@@ -172,12 +210,12 @@
             <h2>Texniki Bacarıqlar</h2>
             <div class="skills-grid">
                 <span class="skill">Wazuh EDR/XDR</span>
-                <span class="skill">Network Security (NGFW)</span>
+                <span class="skill">Network & Firewall NGFW</span>
                 <span class="skill">Linux Administration</span>
                 <span class="skill">Active Directory</span>
-                <span class="skill">IDS/IPS</span>
                 <span class="skill">Docker & Virtualization</span>
-                <span class="skill">Log Analysis & SIEM</span>
+                <span class="skill">SIEM & Log Management</span>
+                <span class="skill">Cloudflare WAF</span>
             </div>
         </div>
     </div>
