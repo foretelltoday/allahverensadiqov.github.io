@@ -3,69 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Allahverən Sadıqov | Kibertəhlükəsizlik Mütəxəssisi</title>
+    <title>Allahveren Sadiqov | Cybersecurity Specialist</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        body { font-family: 'Courier New', Courier, monospace; background-color: #0d0d0d; color: #00ff41; margin: 0; padding: 20px; line-height: 1.6; }
-        .container { max-width: 800px; margin: auto; border: 1px solid #00ff41; padding: 30px; box-shadow: 0 0 15px rgba(0, 255, 65, 0.2); }
-        h1 { border-bottom: 2px solid #00ff41; padding-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
-        .section { margin-bottom: 25px; border-left: 3px solid #333; padding-left: 15px; }
-        .label { font-weight: bold; color: #fff; text-transform: uppercase; display: block; margin-bottom: 5px; }
-        a { color: #00ff41; text-decoration: none; border: 1px solid #00ff41; padding: 4px 8px; margin: 5px 5px 0 0; display: inline-block; font-size: 0.9em; }
-        a:hover { background: #00ff41; color: #000; }
-        .skills span { background: #1a1a1a; padding: 5px 10px; margin: 5px 5px 5px 0; display: inline-block; border-radius: 3px; border: 1px solid #333; font-size: 0.9em; }
-        ul { list-style-type: "> "; padding-left: 20px; }
-        .admin-box { background: rgba(0, 255, 65, 0.05); padding: 15px; border: 1px dashed #00ff41; margin-top: 10px; }
+        :root {
+            --primary-color: #0077b5; /* LinkedIn Blue */
+            --bg-color: #f3f2ef;
+            --text-main: #191919;
+            --text-sub: #666666;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        /* Header / Banner Section */
+        .profile-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        .banner {
+            height: 150px;
+            background: linear-gradient(135deg, #0077b5 0%, #00a0dc 100%);
+        }
+
+        .profile-info {
+            padding: 0 24px 24px;
+            position: relative;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid var(--white);
+            background: #ddd;
+            margin-top: -75px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            color: #666;
+            background-color: #f3f2ef;
+        }
+
+        h1 { font-size: 24px; margin: 15px 0 5px; }
+        .headline { font-size: 18px; color: var(--text-sub); margin-bottom: 10px; }
+        .location { font-size: 14px; color: var(--text-sub); }
+
+        /* Section Styling */
+        .section {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 24px;
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+        }
+
+        h2 { font-size: 20px; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-top: 0; }
+
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .icon-box {
+            min-width: 48px;
+            height: 48px;
+            background: #f3f2ef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: var(--primary-color);
+        }
+
+        .details h3 { margin: 0; font-size: 16px; }
+        .details p { margin: 4px 0; color: var(--text-sub); font-size: 14px; }
+
+        /* Skills Tags */
+        .skills-container { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-tag {
+            background: #e7f3ff;
+            color: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .veteran-badge {
+            background: #e6f4ea;
+            color: #1e7e34;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1>Allahverən Sadıqov</h1>
-        <div class="section">
-            <p><span class="label">Hərbi Xidmət:</span> İkinci Qarabağ Müharibəsi Veteranı </p>
-            <p><span class="label">Status:</span> Kibertəhlükəsizlik üzrə Təcrübəçi (Blue Team / SOC Analyst) </p>
-            <p><span class="label">Xülasə:</span> "Code Academy" tələbəsi olaraq şəbəkə infrastrukturu və Linux sistemləri üzrə praktiki bacarıqlara malikəm[cite: 3, 14]. Fokusum: Log analizi, monitorinq (Wazuh EDR/XDR) və Telegram botları ilə avtomatlaşdırma.</p>
-        </div>
-
-        <div class="section">
-            <h2 class="label">Texniki Bacarıqlar [cite: 4]</h2>
-            <div class="skills">
-                <span>Network & Firewall NGFW [cite: 5, 6]</span>
-                <span>IDS/IPS [cite: 7]</span>
-                <span>Linux & Windows Administration [cite: 8]</span>
-                <span>Active Directory Management [cite: 9]</span>
-                <span>Docker & Virtualization [cite: 10, 11]</span>
-                <span>PAM (Privileged Access Management) [cite: 12]</span>
-                <span>Wazuh EDR/XDR & Cloudflare WAF</span>
+        <div class="profile-card">
+            <div class="banner"></div>
+            <div class="profile-info">
+                <div class="avatar"><i class="fa-solid fa-user-shield"></i></div>
+                <h1>Allahverən Sadıqov</h1>
+                <div class="headline">Cybersecurity Specialist | Blue Team & SOC Analyst Trainee</div>
+                <div class="location">Baku, Azerbaijan</div>
+                <div class="veteran-badge"><i class="fa-solid fa-medal"></i> İkinci Qarabağ Müharibəsi Veteranı</div>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="label">Təhsil & Təlimlər</h2>
-            <p>• <strong>Code Academy:</strong> Kibertəhlükəsizlik (09.2025 - 03.2026) [cite: 14]</p>
-            <p>• <strong>UNEC:</strong> Beynəlxalq İqtisadi Münasibətlər (Bakalavr, 2008 - 2012) [cite: 14]</p>
-            <p>• <strong>Təlim:</strong> Red Hat Certified System Administrator (Kurs tamamlanıb) </p>
+            <h2>Haqqında</h2>
+            <p style="line-height: 1.6; color: #444;">
+                "Code Academy" tələbəsi olaraq şəbəkə infrastrukturu və Linux sistemləri üzrə praktiki bacarıqlara malikəm. 
+                Fokusum: Log analizi, monitoring (Wazuh EDR/XDR) və Telegram botları ilə proseslərin avtomatlaşdırılmasıdır.
+            </p>
         </div>
 
         <div class="section">
-            <h2 class="label">Dillər [cite: 15]</h2>
-            <p>Azərbaycan (Ana dili) [cite: 16], Rus (C2) [cite: 18], İngilis (A2) [cite: 17]</p>
-        </div>
-
-        <div class="section">
-            <h2 class="label">Laboratoriya & Admin Paneli</h2>
-            <div class="admin-box">
-                <p>İnfrastrukturun aktiv monitorinqi və idarəetmə keçidləri:</p>
-                <a href="https://dash.cloudflare.com/" target="_blank">Cloudflare Admin</a>
-                <a href="https://console.cloud.google.com/" target="_blank">Google Cloud Console</a>
-                <a href="https://shop.sadiqov.com" target="_blank">Lab: shop.sadiqov.com</a>
+            <h2>Təcrübə</h2>
+            <div class="experience-item">
+                <div class="icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+                <div class="details">
+                    <h3>Cybersecurity Intern (Blue Team)</h3>
+                    <p>Code Academy • 2025 - Hazırda</p>
+                    <p>Wazuh EDR/XDR tətbiqi, Firewall (NGFW) idarəetməsi və SOC əməliyyatlarının öyrənilməsi.</p>
+                </div>
             </div>
         </div>
 
         <div class="section">
-            <h2 class="label">Əlaqə </h2>
-            <p>Bakı, Azərbaycan | kamallahveren@gmail.com </p>
-            <p>Doğum tarixi: 20 noyabr 1990 </p>
+            <h2>Təhsil</h2>
+            <div class="education-item">
+                <div class="icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+                <div class="details">
+                    <h3>Code Academy</h3>
+                    <p>Kibertəhlükəsizlik • 2025 - 2026</p>
+                </div>
+            </div>
+            <div class="education-item">
+                <div class="icon-box"><i class="fa-solid fa-university"></i></div>
+                <div class="details">
+                    <h3>Azərbaycan Dövlət İqtisad Universiteti (UNEC)</h3>
+                    <p>Beynəlxalq İqtisadi Münasibətlər (Bakalavr) • 2008 - 2012</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Texniki Bacarıqlar</h2>
+            <div class="skills-container">
+                <span class="skill-tag">Wazuh EDR/XDR</span>
+                <span class="skill-tag">Network & Firewall NGFW</span>
+                <span class="skill-tag">Linux & Windows Admin</span>
+                <span class="skill-tag">IDS/IPS</span>
+                <span class="skill-tag">Active Directory</span>
+                <span class="skill-tag">Docker & Virtualization</span>
+                <span class="skill-tag">PAM</span>
+                <span class="skill-tag">Cloudflare WAF</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Dillər</h2>
+            <p><strong>Azərbaycan:</strong> Ana dili</p>
+            <p><strong>Rus:</strong> C2 (Mükəmməl)</p>
+            <p><strong>İngilis:</strong> A2 (Texniki səviyyə)</p>
         </div>
     </div>
+
 </body>
 </html>
